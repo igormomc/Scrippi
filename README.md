@@ -1,5 +1,10 @@
-# Scrippi
+<p align="center">
+  <img src="ScrippiLogoNoBg.png" width="250">
+  <h1 align="center">Scrippi</h1>
+  <h3 align="center">Streamlining Your Command Line Workflow</h3>
+</p>
 
+---
 ## Overview
 Scrippi is a macOS menu bar app designed to enhance productivity by simplifying the execution of frequently used scripts and commands. It's especially useful for users who find themselves repeatedly running the same commands in the terminal, such as navigating to a work directory and executing `docker compose up`. Scrippi aims to save time and reduce repetitive strain by making these commands accessible with just a click.
 
