@@ -34,8 +34,17 @@ class MenuManager {
                 }
             }
         }
+        
+        // 'Edit JSON' menu item
+        if let jsonImage = NSImage(named: NSImage.Name("JsonLogo")) {
+            jsonImage.isTemplate = true
+            let jsonMenuItem = NSMenuItem(title: "Edit JSON", action: #selector(editJsonFile), keyEquivalent: "")
+            jsonMenuItem.image = jsonImage
+            jsonMenuItem.target = self
+            menu.addItem(jsonMenuItem)
+        }
 
-        // Add 'Refresh Menu' menu item
+        // 'Refresh Menu' menu item
         menu.addItem(NSMenuItem.separator())
         if let refreshImage = NSImage(named: NSImage.Name("RefreshLogo")) {
             refreshImage.isTemplate = true
@@ -45,16 +54,7 @@ class MenuManager {
             menu.addItem(refreshMenuItem)
         }
 
-        // Add 'Edit JSON' menu item
-        if let jsonImage = NSImage(named: NSImage.Name("JsonLogo")) {
-            jsonImage.isTemplate = true
-            let jsonMenuItem = NSMenuItem(title: "Edit JSON", action: #selector(editJsonFile), keyEquivalent: "")
-            jsonMenuItem.image = jsonImage
-            jsonMenuItem.target = self
-            menu.addItem(jsonMenuItem)
-        }
-
-        // Add 'Github' menu item with image
+        // 'Github' menu item with image
         if let githubImage = NSImage(named: NSImage.Name("GithubLogo")) {
             githubImage.isTemplate = true
             let githubMenuItem = NSMenuItem(title: "Contribute", action: #selector(openGithubURL), keyEquivalent: "")
