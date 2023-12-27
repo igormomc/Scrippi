@@ -7,19 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E83546292B3C8C3D00FC3E39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83546282B3C8C3D00FC3E39 /* ViewController.swift */; };
 		E8E1223C2B3B5D7600C0A512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1223B2B3B5D7600C0A512 /* AppDelegate.swift */; };
-		E8E1223E2B3B5D7600C0A512 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1223D2B3B5D7600C0A512 /* ViewController.swift */; };
 		E8E122402B3B5D7700C0A512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E1223F2B3B5D7700C0A512 /* Assets.xcassets */; };
 		E8E122432B3B5D7700C0A512 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E122412B3B5D7700C0A512 /* Main.storyboard */; };
 		E8E1224E2B3B5D7700C0A512 /* ScrippiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1224D2B3B5D7700C0A512 /* ScrippiTests.swift */; };
 		E8E122582B3B5D7700C0A512 /* ScrippiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E122572B3B5D7700C0A512 /* ScrippiUITests.swift */; };
 		E8E1225A2B3B5D7700C0A512 /* ScrippiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E122592B3B5D7700C0A512 /* ScrippiUITestsLaunchTests.swift */; };
 		E8E122672B3B5DFE00C0A512 /* MenuItems.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E122662B3B5DFE00C0A512 /* MenuItems.json */; };
-		E8E122692B3B5F7600C0A512 /* YourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E122682B3B5F7600C0A512 /* YourViewController.swift */; };
-		E8E1226B2B3B92F100C0A512 /* ButtonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1226A2B3B92F100C0A512 /* ButtonManager.swift */; };
 		E8E1226D2B3B930800C0A512 /* ScriptExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1226C2B3B930800C0A512 /* ScriptExecutor.swift */; };
-		E8E1226F2B3B931800C0A512 /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1226E2B3B931800C0A512 /* JSONManager.swift */; };
-		E8E122712B3B945800C0A512 /* HoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E122702B3B945800C0A512 /* HoverButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E83546282B3C8C3D00FC3E39 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E8E122382B3B5D7600C0A512 /* Scrippi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrippi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E1223B2B3B5D7600C0A512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E8E1223D2B3B5D7600C0A512 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E8E1223F2B3B5D7700C0A512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8E122422B3B5D7700C0A512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8E122442B3B5D7700C0A512 /* Scrippi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scrippi.entitlements; sourceTree = "<group>"; };
@@ -52,11 +48,7 @@
 		E8E122572B3B5D7700C0A512 /* ScrippiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrippiUITests.swift; sourceTree = "<group>"; };
 		E8E122592B3B5D7700C0A512 /* ScrippiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrippiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E8E122662B3B5DFE00C0A512 /* MenuItems.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MenuItems.json; sourceTree = "<group>"; };
-		E8E122682B3B5F7600C0A512 /* YourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourViewController.swift; sourceTree = "<group>"; };
-		E8E1226A2B3B92F100C0A512 /* ButtonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonManager.swift; sourceTree = "<group>"; };
 		E8E1226C2B3B930800C0A512 /* ScriptExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptExecutor.swift; sourceTree = "<group>"; };
-		E8E1226E2B3B931800C0A512 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
-		E8E122702B3B945800C0A512 /* HoverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,17 +99,13 @@
 		E8E1223A2B3B5D7600C0A512 /* Scrippi */ = {
 			isa = PBXGroup;
 			children = (
+				E83546282B3C8C3D00FC3E39 /* ViewController.swift */,
 				E8E1223B2B3B5D7600C0A512 /* AppDelegate.swift */,
-				E8E1223D2B3B5D7600C0A512 /* ViewController.swift */,
 				E8E1223F2B3B5D7700C0A512 /* Assets.xcassets */,
 				E8E122412B3B5D7700C0A512 /* Main.storyboard */,
 				E8E122442B3B5D7700C0A512 /* Scrippi.entitlements */,
 				E8E122662B3B5DFE00C0A512 /* MenuItems.json */,
-				E8E122682B3B5F7600C0A512 /* YourViewController.swift */,
-				E8E1226A2B3B92F100C0A512 /* ButtonManager.swift */,
 				E8E1226C2B3B930800C0A512 /* ScriptExecutor.swift */,
-				E8E1226E2B3B931800C0A512 /* JSONManager.swift */,
-				E8E122702B3B945800C0A512 /* HoverButton.swift */,
 			);
 			path = Scrippi;
 			sourceTree = "<group>";
@@ -270,12 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8E1223E2B3B5D7600C0A512 /* ViewController.swift in Sources */,
-				E8E1226F2B3B931800C0A512 /* JSONManager.swift in Sources */,
-				E8E1226B2B3B92F100C0A512 /* ButtonManager.swift in Sources */,
+				E83546292B3C8C3D00FC3E39 /* ViewController.swift in Sources */,
 				E8E1223C2B3B5D7600C0A512 /* AppDelegate.swift in Sources */,
-				E8E122712B3B945800C0A512 /* HoverButton.swift in Sources */,
-				E8E122692B3B5F7600C0A512 /* YourViewController.swift in Sources */,
 				E8E1226D2B3B930800C0A512 /* ScriptExecutor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
