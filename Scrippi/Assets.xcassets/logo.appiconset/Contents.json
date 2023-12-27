@@ -1,21 +1,25 @@
 {
   "images" : [
     {
+      "filename" : "icons8-menu-16.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
+      "filename" : "icons8-menu-32.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
+      "filename" : "icons8-menu-32 1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
+      "filename" : "icons8-menu-64.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
