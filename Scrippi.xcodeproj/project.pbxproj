@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E83546292B3C8C3D00FC3E39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83546282B3C8C3D00FC3E39 /* ViewController.swift */; };
+		E89003522B3CCDE7007B20E7 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89003512B3CCDE7007B20E7 /* MenuManager.swift */; };
+		E89003542B3CCEB7007B20E7 /* AppFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89003532B3CCEB7007B20E7 /* AppFileManager.swift */; };
 		E8E1223C2B3B5D7600C0A512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1223B2B3B5D7600C0A512 /* AppDelegate.swift */; };
 		E8E122402B3B5D7700C0A512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E1223F2B3B5D7700C0A512 /* Assets.xcassets */; };
 		E8E122432B3B5D7700C0A512 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E122412B3B5D7700C0A512 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		E83546282B3C8C3D00FC3E39 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E89003512B3CCDE7007B20E7 /* MenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
+		E89003532B3CCEB7007B20E7 /* AppFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFileManager.swift; sourceTree = "<group>"; };
 		E8E122382B3B5D7600C0A512 /* Scrippi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrippi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E1223B2B3B5D7600C0A512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8E1223F2B3B5D7700C0A512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				E8E122442B3B5D7700C0A512 /* Scrippi.entitlements */,
 				E8E122662B3B5DFE00C0A512 /* MenuItems.json */,
 				E8E1226C2B3B930800C0A512 /* ScriptExecutor.swift */,
+				E89003512B3CCDE7007B20E7 /* MenuManager.swift */,
+				E89003532B3CCEB7007B20E7 /* AppFileManager.swift */,
 			);
 			path = Scrippi;
 			sourceTree = "<group>";
@@ -258,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E89003542B3CCEB7007B20E7 /* AppFileManager.swift in Sources */,
+				E89003522B3CCDE7007B20E7 /* MenuManager.swift in Sources */,
 				E83546292B3C8C3D00FC3E39 /* ViewController.swift in Sources */,
 				E8E1223C2B3B5D7600C0A512 /* AppDelegate.swift in Sources */,
 				E8E1226D2B3B930800C0A512 /* ScriptExecutor.swift in Sources */,

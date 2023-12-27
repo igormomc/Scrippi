@@ -9,118 +9,34 @@ import Cocoa
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
-
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     var scriptExecutor = ScriptExecutor()
     var editableJsonURL: URL?
+    var menuManager: MenuManager!
+    var appFileManager: AppFileManager!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        if let button = statusItem.button {
-            button.image = NSImage(named: NSImage.Name("AppLogo"))
-            button.image?.isTemplate = true // Makes it compatible with dark mode
-            button.action = #selector(showMenu(_:))
-            button.target = self
-        }
-        prepareEditableJsonFile()
-        constructMenu()
-    }
-    @objc func showMenu(_ sender: Any?) {
-            constructMenu()
-            statusItem.button?.performClick(nil)
-        }
-
-    private func prepareEditableJsonFile() {
         let fileManager = FileManager.default
         let appSupportURL = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
         let appDirectoryURL = appSupportURL.appendingPathComponent("YourAppName")
         editableJsonURL = appDirectoryURL.appendingPathComponent("MenuItems.json")
 
-        if !fileManager.fileExists(atPath: editableJsonURL!.path) {
-            if let bundleJsonURL = Bundle.main.url(forResource: "MenuItems", withExtension: "json") {
-                do {
-                    try fileManager.createDirectory(at: appDirectoryURL, withIntermediateDirectories: true, attributes: nil)
-                    try fileManager.copyItem(at: bundleJsonURL, to: editableJsonURL!)
-                } catch {
-                    print("Error copying JSON file: \(error)")
-                }
-            }
+        self.menuManager = MenuManager(statusItem: statusItem, scriptExecutor: scriptExecutor, editableJsonURL: editableJsonURL)
+        self.appFileManager = AppFileManager(editableJsonURL: editableJsonURL)
+
+        if let button = statusItem.button {
+            button.image = NSImage(named: NSImage.Name("AppLogo"))
+            button.image?.isTemplate = true
+            button.action = #selector(showMenu(_:))
+            button.target = self
         }
+        appFileManager.prepareEditableJsonFile()
+        menuManager.constructMenu()
     }
 
-    private func constructMenu() {
-        let menu = NSMenu()
-
-        // Load and add menu items from JSON
-        if let menuItems = loadMenuItemsFromJson() {
-            for item in menuItems {
-                if let type = item["type"] as? String, type == "separator" {
-                    menu.addItem(NSMenuItem.separator())
-                } else if let title = item["title"] as? String, let script = item["script"] as? String {
-                    let menuItem = NSMenuItem(title: title, action: #selector(menuItemAction(_:)), keyEquivalent: "")
-                    menuItem.representedObject = script
-                    menu.addItem(menuItem)
-                }
-            }
-        }
-
-        // Add 'Refresh Menu' menu item
-        menu.addItem(NSMenuItem.separator())
-        if let refreshImage = NSImage(named: NSImage.Name("RefreshLogo")) {
-                refreshImage.isTemplate = true // Set isTemplate to true for dark mode compatibility
-                let refreshMenuItem = NSMenuItem(title: "Refresh Menu", action: #selector(refreshMenu), keyEquivalent: "")
-                refreshMenuItem.image = refreshImage
-                menu.addItem(refreshMenuItem)
-            }
-        // Add 'Edit JSON' menu item
-        if let jsonImage = NSImage(named: NSImage.Name("JsonLogo")) {
-              jsonImage.isTemplate = true // Set isTemplate to true for dark mode compatibility
-              let jsonMenuItem = NSMenuItem(title: "Edit JSON", action: #selector(editJsonFile), keyEquivalent: "")
-              jsonMenuItem.image = jsonImage
-              menu.addItem(jsonMenuItem)
-          }
-        // Add 'Github' menu item with image
-            if let githubImage = NSImage(named: NSImage.Name("GithubLogo")) {
-                githubImage.isTemplate = true // Set isTemplate to true for dark mode compatibility
-                let githubMenuItem = NSMenuItem(title: "Contribute", action: #selector(openGithubURL), keyEquivalent: "")
-                githubMenuItem.image = githubImage
-                menu.addItem(githubMenuItem)
-            }
-        statusItem.menu = menu
-    }
-
-    @objc func refreshMenu() {
-        constructMenu()
-    }
-
-    @objc private func editJsonFile() {
-        if let url = editableJsonURL {
-            NSWorkspace.shared.open(url)
-        } else {
-            print("Editable JSON file URL is not set.")
-        }
-    }
-    
-    @objc private func openGithubURL() {
-            if let url = URL(string: "https://github.com/igormomc/Scrippi") {
-                NSWorkspace.shared.open(url)
-            }
-        }
-    @objc func menuItemAction(_ sender: NSMenuItem) {
-        if let script = sender.representedObject as? String {
-            scriptExecutor.executeScript(command: script)
-        }
-    }
-
-    private func loadMenuItemsFromJson() -> [[String: Any]]? {
-        guard let url = editableJsonURL,
-              let data = try? Data(contentsOf: url),
-              let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []),
-              let jsonDict = jsonObject as? [String: Any],
-              let menuItems = jsonDict["menu"] as? [[String: Any]] else {
-            print("Failed to load or parse the editable MenuItems.json")
-            return nil
-        }
-        return menuItems
+    @objc func showMenu(_ sender: Any?) {
+        menuManager.constructMenu()
+        statusItem.button?.performClick(nil)
     }
 
     @objc func quitApp() {
