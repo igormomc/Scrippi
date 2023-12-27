@@ -1,0 +1,25 @@
+{
+    "menu": [
+        {
+            "type": "separator"
+        },
+        {
+            "title": "1111111111",
+            "script": "ls"
+        },
+        {
+            "type": "separator"
+        },
+        {
+            "title": "2222222",
+            "script": "cd .. && ls"
+        },
+        {
+            "type": "separator"
+        },
+        {
+            "title": "OVERO DOCKER",
+            "script": "cd Desktop/OOOOO/overo && docker compose up"
+        }
+    ]
+}

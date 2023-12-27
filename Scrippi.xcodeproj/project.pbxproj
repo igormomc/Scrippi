@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E8E1223C2B3B5D7600C0A512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1223B2B3B5D7600C0A512 /* AppDelegate.swift */; };
+		E8E1223E2B3B5D7600C0A512 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1223D2B3B5D7600C0A512 /* ViewController.swift */; };
+		E8E122402B3B5D7700C0A512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E1223F2B3B5D7700C0A512 /* Assets.xcassets */; };
+		E8E122432B3B5D7700C0A512 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E122412B3B5D7700C0A512 /* Main.storyboard */; };
+		E8E1224E2B3B5D7700C0A512 /* ScrippiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1224D2B3B5D7700C0A512 /* ScrippiTests.swift */; };
+		E8E122582B3B5D7700C0A512 /* ScrippiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E122572B3B5D7700C0A512 /* ScrippiUITests.swift */; };
+		E8E1225A2B3B5D7700C0A512 /* ScrippiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E122592B3B5D7700C0A512 /* ScrippiUITestsLaunchTests.swift */; };
+		E8E122672B3B5DFE00C0A512 /* MenuItems.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E122662B3B5DFE00C0A512 /* MenuItems.json */; };
+		E8E122692B3B5F7600C0A512 /* YourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E122682B3B5F7600C0A512 /* YourViewController.swift */; };
+		E8E1226B2B3B92F100C0A512 /* ButtonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1226A2B3B92F100C0A512 /* ButtonManager.swift */; };
+		E8E1226D2B3B930800C0A512 /* ScriptExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1226C2B3B930800C0A512 /* ScriptExecutor.swift */; };
+		E8E1226F2B3B931800C0A512 /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1226E2B3B931800C0A512 /* JSONManager.swift */; };
+		E8E122712B3B945800C0A512 /* HoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E122702B3B945800C0A512 /* HoverButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E8E1224A2B3B5D7700C0A512 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8E122302B3B5D7600C0A512 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8E122372B3B5D7600C0A512;
+			remoteInfo = Scrippi;
+		};
+		E8E122542B3B5D7700C0A512 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8E122302B3B5D7600C0A512 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8E122372B3B5D7600C0A512;
+			remoteInfo = Scrippi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E8E122382B3B5D7600C0A512 /* Scrippi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrippi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8E1223B2B3B5D7600C0A512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E8E1223D2B3B5D7600C0A512 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E8E1223F2B3B5D7700C0A512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E8E122422B3B5D7700C0A512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E8E122442B3B5D7700C0A512 /* Scrippi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scrippi.entitlements; sourceTree = "<group>"; };
+		E8E122492B3B5D7700C0A512 /* ScrippiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrippiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8E1224D2B3B5D7700C0A512 /* ScrippiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrippiTests.swift; sourceTree = "<group>"; };
+		E8E122532B3B5D7700C0A512 /* ScrippiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrippiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8E122572B3B5D7700C0A512 /* ScrippiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrippiUITests.swift; sourceTree = "<group>"; };
+		E8E122592B3B5D7700C0A512 /* ScrippiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrippiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E8E122662B3B5DFE00C0A512 /* MenuItems.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MenuItems.json; sourceTree = "<group>"; };
+		E8E122682B3B5F7600C0A512 /* YourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourViewController.swift; sourceTree = "<group>"; };
+		E8E1226A2B3B92F100C0A512 /* ButtonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonManager.swift; sourceTree = "<group>"; };
+		E8E1226C2B3B930800C0A512 /* ScriptExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptExecutor.swift; sourceTree = "<group>"; };
+		E8E1226E2B3B931800C0A512 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
+		E8E122702B3B945800C0A512 /* HoverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E8E122352B3B5D7600C0A512 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8E122462B3B5D7700C0A512 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8E122502B3B5D7700C0A512 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E8E1222F2B3B5D7600C0A512 = {
+			isa = PBXGroup;
+			children = (
+				E8E1223A2B3B5D7600C0A512 /* Scrippi */,
+				E8E1224C2B3B5D7700C0A512 /* ScrippiTests */,
+				E8E122562B3B5D7700C0A512 /* ScrippiUITests */,
+				E8E122392B3B5D7600C0A512 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E8E122392B3B5D7600C0A512 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E8E122382B3B5D7600C0A512 /* Scrippi.app */,
+				E8E122492B3B5D7700C0A512 /* ScrippiTests.xctest */,
+				E8E122532B3B5D7700C0A512 /* ScrippiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E8E1223A2B3B5D7600C0A512 /* Scrippi */ = {
+			isa = PBXGroup;
+			children = (
+				E8E1223B2B3B5D7600C0A512 /* AppDelegate.swift */,
+				E8E1223D2B3B5D7600C0A512 /* ViewController.swift */,
+				E8E1223F2B3B5D7700C0A512 /* Assets.xcassets */,
+				E8E122412B3B5D7700C0A512 /* Main.storyboard */,
+				E8E122442B3B5D7700C0A512 /* Scrippi.entitlements */,
+				E8E122662B3B5DFE00C0A512 /* MenuItems.json */,
+				E8E122682B3B5F7600C0A512 /* YourViewController.swift */,
+				E8E1226A2B3B92F100C0A512 /* ButtonManager.swift */,
+				E8E1226C2B3B930800C0A512 /* ScriptExecutor.swift */,
+				E8E1226E2B3B931800C0A512 /* JSONManager.swift */,
+				E8E122702B3B945800C0A512 /* HoverButton.swift */,
+			);
+			path = Scrippi;
+			sourceTree = "<group>";
+		};
+		E8E1224C2B3B5D7700C0A512 /* ScrippiTests */ = {
+			isa = PBXGroup;
+			children = (
+				E8E1224D2B3B5D7700C0A512 /* ScrippiTests.swift */,
+			);
+			path = ScrippiTests;
+			sourceTree = "<group>";
+		};
+		E8E122562B3B5D7700C0A512 /* ScrippiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E8E122572B3B5D7700C0A512 /* ScrippiUITests.swift */,
+				E8E122592B3B5D7700C0A512 /* ScrippiUITestsLaunchTests.swift */,
+			);
+			path = ScrippiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E8E122372B3B5D7600C0A512 /* Scrippi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8E1225D2B3B5D7700C0A512 /* Build configuration list for PBXNativeTarget "Scrippi" */;
+			buildPhases = (
+				E8E122342B3B5D7600C0A512 /* Sources */,
+				E8E122352B3B5D7600C0A512 /* Frameworks */,
+				E8E122362B3B5D7600C0A512 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Scrippi;
+			productName = Scrippi;
+			productReference = E8E122382B3B5D7600C0A512 /* Scrippi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E8E122482B3B5D7700C0A512 /* ScrippiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8E122602B3B5D7700C0A512 /* Build configuration list for PBXNativeTarget "ScrippiTests" */;
+			buildPhases = (
+				E8E122452B3B5D7700C0A512 /* Sources */,
+				E8E122462B3B5D7700C0A512 /* Frameworks */,
+				E8E122472B3B5D7700C0A512 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8E1224B2B3B5D7700C0A512 /* PBXTargetDependency */,
+			);
+			name = ScrippiTests;
+			productName = ScrippiTests;
+			productReference = E8E122492B3B5D7700C0A512 /* ScrippiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E8E122522B3B5D7700C0A512 /* ScrippiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8E122632B3B5D7700C0A512 /* Build configuration list for PBXNativeTarget "ScrippiUITests" */;
+			buildPhases = (
+				E8E1224F2B3B5D7700C0A512 /* Sources */,
+				E8E122502B3B5D7700C0A512 /* Frameworks */,
+				E8E122512B3B5D7700C0A512 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8E122552B3B5D7700C0A512 /* PBXTargetDependency */,
+			);
+			name = ScrippiUITests;
+			productName = ScrippiUITests;
+			productReference = E8E122532B3B5D7700C0A512 /* ScrippiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E8E122302B3B5D7600C0A512 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					E8E122372B3B5D7600C0A512 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					E8E122482B3B5D7700C0A512 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = E8E122372B3B5D7600C0A512;
+					};
+					E8E122522B3B5D7700C0A512 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = E8E122372B3B5D7600C0A512;
+					};
+				};
+			};
+			buildConfigurationList = E8E122332B3B5D7600C0A512 /* Build configuration list for PBXProject "Scrippi" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E8E1222F2B3B5D7600C0A512;
+			productRefGroup = E8E122392B3B5D7600C0A512 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E8E122372B3B5D7600C0A512 /* Scrippi */,
+				E8E122482B3B5D7700C0A512 /* ScrippiTests */,
+				E8E122522B3B5D7700C0A512 /* ScrippiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E8E122362B3B5D7600C0A512 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8E122672B3B5DFE00C0A512 /* MenuItems.json in Resources */,
+				E8E122402B3B5D7700C0A512 /* Assets.xcassets in Resources */,
+				E8E122432B3B5D7700C0A512 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8E122472B3B5D7700C0A512 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8E122512B3B5D7700C0A512 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E8E122342B3B5D7600C0A512 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8E1223E2B3B5D7600C0A512 /* ViewController.swift in Sources */,
+				E8E1226F2B3B931800C0A512 /* JSONManager.swift in Sources */,
+				E8E1226B2B3B92F100C0A512 /* ButtonManager.swift in Sources */,
+				E8E1223C2B3B5D7600C0A512 /* AppDelegate.swift in Sources */,
+				E8E122712B3B945800C0A512 /* HoverButton.swift in Sources */,
+				E8E122692B3B5F7600C0A512 /* YourViewController.swift in Sources */,
+				E8E1226D2B3B930800C0A512 /* ScriptExecutor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8E122452B3B5D7700C0A512 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8E1224E2B3B5D7700C0A512 /* ScrippiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8E1224F2B3B5D7700C0A512 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8E122582B3B5D7700C0A512 /* ScrippiUITests.swift in Sources */,
+				E8E1225A2B3B5D7700C0A512 /* ScrippiUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E8E1224B2B3B5D7700C0A512 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8E122372B3B5D7600C0A512 /* Scrippi */;
+			targetProxy = E8E1224A2B3B5D7700C0A512 /* PBXContainerItemProxy */;
+		};
+		E8E122552B3B5D7700C0A512 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8E122372B3B5D7600C0A512 /* Scrippi */;
+			targetProxy = E8E122542B3B5D7700C0A512 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E8E122412B3B5D7700C0A512 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E8E122422B3B5D7700C0A512 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E8E1225B2B3B5D7700C0A512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E8E1225C2B3B5D7700C0A512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		E8E1225E2B3B5D7700C0A512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Scrippi/Scrippi.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = igormomc.Scrippi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E8E1225F2B3B5D7700C0A512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Scrippi/Scrippi.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = igormomc.Scrippi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E8E122612B3B5D7700C0A512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = igormomc.ScrippiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scrippi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Scrippi";
+			};
+			name = Debug;
+		};
+		E8E122622B3B5D7700C0A512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = igormomc.ScrippiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scrippi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Scrippi";
+			};
+			name = Release;
+		};
+		E8E122642B3B5D7700C0A512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = igormomc.ScrippiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Scrippi;
+			};
+			name = Debug;
+		};
+		E8E122652B3B5D7700C0A512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = igormomc.ScrippiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Scrippi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E8E122332B3B5D7600C0A512 /* Build configuration list for PBXProject "Scrippi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8E1225B2B3B5D7700C0A512 /* Debug */,
+				E8E1225C2B3B5D7700C0A512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8E1225D2B3B5D7700C0A512 /* Build configuration list for PBXNativeTarget "Scrippi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8E1225E2B3B5D7700C0A512 /* Debug */,
+				E8E1225F2B3B5D7700C0A512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8E122602B3B5D7700C0A512 /* Build configuration list for PBXNativeTarget "ScrippiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8E122612B3B5D7700C0A512 /* Debug */,
+				E8E122622B3B5D7700C0A512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8E122632B3B5D7700C0A512 /* Build configuration list for PBXNativeTarget "ScrippiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8E122642B3B5D7700C0A512 /* Debug */,
+				E8E122652B3B5D7700C0A512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E8E122302B3B5D7600C0A512 /* Project object */;
+}
