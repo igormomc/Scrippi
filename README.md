@@ -1,16 +1,16 @@
 # Scrippi
 
 ## Overview
-Scrippi is a versatile macOS menu bar app designed to streamline and simplify the execution of scripts and commands directly from your desktop. With a focus on efficiency and ease of use, Scrippi provides quick access to a range of predefined functionalities, enhancing productivity for both developers and general users.
+Scrippi is a macOS menu bar app designed to enhance productivity by simplifying the execution of frequently used scripts and commands. It's especially useful for users who find themselves repeatedly running the same commands in the terminal, such as navigating to a work directory and executing `docker compose up`. Scrippi aims to save time and reduce repetitive strain by making these commands accessible with just a click.
 
 ## Features
-- **Customizable Menu**: Users can easily add, remove, or modify menu items to fit their specific needs.
-- **Script Execution**: Execute predefined scripts or commands with a single click.
-- **JSON Configuration**: All menu items are configured through a simple JSON file, allowing for rapid changes and customization.
-- **Dark Mode Compatibility**: Icons adapt seamlessly to both light and dark modes of macOS for an integrated user experience.
+- **Customizable Menu**: Add, remove, or modify menu items to suit your workflow.
+- **Quick Script Execution**: Run predefined scripts or commands from the menu bar, eliminating the need to repeatedly type them in the terminal.
+- **JSON Configuration**: Easily configure menu items through a JSON file for quick updates and customizations.
+- **Dark Mode Compatibility**: Icons adapt to both light and dark modes of macOS.
 
-## How It Works
-Scrippi reads a JSON file that defines the structure and commands of the menu items. Users can modify this file to tailor the app's functionality to their needs.
+## Efficiency in Everyday Tasks
+Regular tasks, such as starting Docker containers in a specific work folder, can be tedious and repetitive. Scrippi streamlines these routines by allowing users to execute such commands directly from the menu bar. This efficiency is particularly beneficial for developers and IT professionals who regularly work with command-line tools and scripts.
 
 ### Example JSON Structure
 ```json
@@ -20,9 +20,9 @@ Scrippi reads a JSON file that defines the structure and commands of the menu it
             "type": "separator"
         },
         {
-            "title": "Command Name",
-            "script": "command_to_execute"
+            "title": "Start Docker",
+            "script": "cd path/to/workfolder && docker compose up"
         },
-        // Add more commands or separators as needed
+        // Additional commands or separators as needed
     ]
 }
