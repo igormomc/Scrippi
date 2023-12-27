@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         if let button = statusItem.button {
-            button.image = NSImage(named: NSImage.Name("Logo"))
+            button.image = NSImage(named: NSImage.Name("AppLogo"))
             button.image?.isTemplate = true // Makes it compatible with dark mode
             button.action = #selector(showMenu(_:))
             button.target = self
@@ -26,7 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     @objc func showMenu(_ sender: Any?) {
             constructMenu()
-            statusItem.button?.performClick(nil) 
+            statusItem.button?.performClick(nil)
         }
 
     private func prepareEditableJsonFile() {
@@ -65,11 +65,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         // Add 'Refresh Menu' menu item
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(withTitle: "Refresh Menu", action: #selector(refreshMenu), keyEquivalent: "")
-
+        if let refreshImage = NSImage(named: NSImage.Name("RefreshLogo")) {
+                refreshImage.isTemplate = true // Set isTemplate to true for dark mode compatibility
+                let refreshMenuItem = NSMenuItem(title: "Refresh Menu", action: #selector(refreshMenu), keyEquivalent: "")
+                refreshMenuItem.image = refreshImage
+                menu.addItem(refreshMenuItem)
+            }
         // Add 'Edit JSON' menu item
-        menu.addItem(withTitle: "Edit JSON", action: #selector(editJsonFile), keyEquivalent: "")
-
+        if let jsonImage = NSImage(named: NSImage.Name("JsonLogo")) {
+              jsonImage.isTemplate = true // Set isTemplate to true for dark mode compatibility
+              let jsonMenuItem = NSMenuItem(title: "Edit JSON", action: #selector(editJsonFile), keyEquivalent: "")
+              jsonMenuItem.image = jsonImage
+              menu.addItem(jsonMenuItem)
+          }
+        // Add 'Github' menu item with image
+            if let githubImage = NSImage(named: NSImage.Name("GithubLogo")) {
+                githubImage.isTemplate = true // Set isTemplate to true for dark mode compatibility
+                let githubMenuItem = NSMenuItem(title: "Contribute", action: #selector(openGithubURL), keyEquivalent: "")
+                githubMenuItem.image = githubImage
+                menu.addItem(githubMenuItem)
+            }
         statusItem.menu = menu
     }
 
@@ -84,7 +99,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             print("Editable JSON file URL is not set.")
         }
     }
-
+    
+    @objc private func openGithubURL() {
+            if let url = URL(string: "https://github.com/igormomc/Scrippi") {
+                NSWorkspace.shared.open(url)
+            }
+        }
     @objc func menuItemAction(_ sender: NSMenuItem) {
         if let script = sender.representedObject as? String {
             scriptExecutor.executeScript(command: script)

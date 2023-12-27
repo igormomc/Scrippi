@@ -1,16 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icons8-github 1.svg",
+      "filename" : "icons8-github.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icons8-github.svg",
+      "filename" : "icons8-github 1.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "icons8-github 2.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }
