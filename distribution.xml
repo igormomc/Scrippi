@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <installer-gui-script minSpecVersion="1">
+        <pkg-ref id="igormomc.Scrippi">
+        <options customize="never" allow-external-scripts="no"/>
+        <choices-outline>
+            <line choice="default">
+                <line choice="igormomc.Scrippi">
+            </line>
+        </choices-outline>
+        <choice id="default"/>
+        <choice id="igormomc.Scrippi" visible="false">
+            <pkg-ref id="igormomc.Scrippi"/>
+        </choice>
+        <pkg-ref id="igormomc.Scrippi" version="1.0" onConclusion="none">y.pkg</pkg-ref>
+    </installer-gui-script>
+
+
+
+
+
+
+
+
+
+
+

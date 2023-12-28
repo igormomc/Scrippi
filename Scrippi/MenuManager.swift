@@ -35,6 +35,9 @@ class MenuManager {
             }
         }
         
+        
+        menu.addItem(NSMenuItem.separator())
+
         // 'Edit JSON' menu item
         if let jsonImage = NSImage(named: NSImage.Name("JsonLogo")) {
             jsonImage.isTemplate = true
@@ -45,7 +48,6 @@ class MenuManager {
         }
 
         // 'Refresh Menu' menu item
-        menu.addItem(NSMenuItem.separator())
         if let refreshImage = NSImage(named: NSImage.Name("RefreshLogo")) {
             refreshImage.isTemplate = true
             let refreshMenuItem = NSMenuItem(title: "Refresh Menu", action: #selector(refreshMenu), keyEquivalent: "")
@@ -62,6 +64,8 @@ class MenuManager {
             githubMenuItem.target = self
             menu.addItem(githubMenuItem)
         }
+        
+        menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
 
         statusItem.menu = menu
     }

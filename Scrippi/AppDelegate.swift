@@ -16,6 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var appFileManager: AppFileManager!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        
         let fileManager = FileManager.default
         let appSupportURL = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
         let appDirectoryURL = appSupportURL.appendingPathComponent("YourAppName")
