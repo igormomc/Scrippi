@@ -9,7 +9,7 @@ import Cocoa
 
 class ScriptExecutor {
     func executeScript(command: String) {
-        let scriptContent = "#!/bin/zsh\n\(command)"
+        let scriptContent = "#!/bin/zsh\n\(command)\nexec $SHELL -l"
         let tempDirectory = NSTemporaryDirectory()
         let scriptPath = "\(tempDirectory)/run_command.sh"
 

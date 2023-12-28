@@ -4,35 +4,29 @@
             "type": "separator"
         },
         {
-            "title": "1111111111",
+            "title": "Script 100",
             "script": "ls"
         },
         {
-            "title": "1111111111",
-            "script": "ls"
+            "title": "Script 2",
+            "script": "ls -la"
         },{
-            "title": "1111111111",
-            "script": "ls"
-        },{
-            "title": "1111111111",
-            "script": "ls"
-        },{
-            "title": "1111111111",
-            "script": "ls"
+            "title": "Script 3",
+            "script": "ECHO Script 3"
         },
         {
             "type": "separator"
         },
         {
-            "title": "2222222",
+            "title": "Script 4",
             "script": "cd .. && ls"
         },
         {
             "type": "separator"
         },
         {
-            "title": "OVERO DOCKER",
-            "script": "cd Desktop/OOOOO/overo && docker compose up"
+            "title": "Work Docker Script",
+            "script": "ECHO Hello world"
         }
     ]
 }
