@@ -14,6 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var editableJsonURL: URL?
     var menuManager: MenuManager!
     var appFileManager: AppFileManager!
+    var settingsWindowController: SettingsWindowController?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
@@ -21,6 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let appSupportURL = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
         let appDirectoryURL = appSupportURL.appendingPathComponent("YourAppName")
         editableJsonURL = appDirectoryURL.appendingPathComponent("MenuItems.json")
+       
 
         self.menuManager = MenuManager(statusItem: statusItem, scriptExecutor: scriptExecutor, editableJsonURL: editableJsonURL)
         self.appFileManager = AppFileManager(editableJsonURL: editableJsonURL)
@@ -43,4 +45,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func quitApp() {
         NSApp.terminate(self)
     }
+    
+    @objc func showSettings() {
+           settingsWindowController = SettingsWindowController()
+           settingsWindowController?.showWindow(nil)
+       }
 }

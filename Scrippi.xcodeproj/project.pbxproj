@@ -10,6 +10,7 @@
 		E83546292B3C8C3D00FC3E39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83546282B3C8C3D00FC3E39 /* ViewController.swift */; };
 		E89003522B3CCDE7007B20E7 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89003512B3CCDE7007B20E7 /* MenuManager.swift */; };
 		E89003542B3CCEB7007B20E7 /* AppFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89003532B3CCEB7007B20E7 /* AppFileManager.swift */; };
+		E8CE96E72B3E26B300393AED /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE96E62B3E26B300393AED /* SettingsWindowController.swift */; };
 		E8E1223C2B3B5D7600C0A512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1223B2B3B5D7600C0A512 /* AppDelegate.swift */; };
 		E8E122402B3B5D7700C0A512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E1223F2B3B5D7700C0A512 /* Assets.xcassets */; };
 		E8E122432B3B5D7700C0A512 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E122412B3B5D7700C0A512 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		E89003512B3CCDE7007B20E7 /* MenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
 		E89003532B3CCEB7007B20E7 /* AppFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFileManager.swift; sourceTree = "<group>"; };
 		E8CE96E52B3E0BF800393AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E8CE96E62B3E26B300393AED /* SettingsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
 		E8E122382B3B5D7600C0A512 /* Scrippi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrippi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E1223B2B3B5D7600C0A512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8E1223F2B3B5D7700C0A512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				E8E1226C2B3B930800C0A512 /* ScriptExecutor.swift */,
 				E89003512B3CCDE7007B20E7 /* MenuManager.swift */,
 				E89003532B3CCEB7007B20E7 /* AppFileManager.swift */,
+				E8CE96E62B3E26B300393AED /* SettingsWindowController.swift */,
 			);
 			path = Scrippi;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				E89003522B3CCDE7007B20E7 /* MenuManager.swift in Sources */,
 				E83546292B3C8C3D00FC3E39 /* ViewController.swift in Sources */,
 				E8E1223C2B3B5D7600C0A512 /* AppDelegate.swift in Sources */,
+				E8CE96E72B3E26B300393AED /* SettingsWindowController.swift in Sources */,
 				E8E1226D2B3B930800C0A512 /* ScriptExecutor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

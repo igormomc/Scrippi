@@ -65,6 +65,11 @@ class MenuManager {
             menu.addItem(githubMenuItem)
         }
         
+        let settingsMenuItem = NSMenuItem(title: "Settings", action: #selector(openSettingsWindow), keyEquivalent: "")
+        settingsMenuItem.target = self
+        menu.addItem(settingsMenuItem)
+
+        
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
 
         statusItem.menu = menu
@@ -99,6 +104,13 @@ class MenuManager {
             print("Editable JSON file URL is not set.")
         }
     }
+    
+    @objc func openSettingsWindow() {
+        let appDelegate = NSApplication.shared.delegate as? AppDelegate
+        appDelegate?.settingsWindowController = SettingsWindowController()
+        appDelegate?.settingsWindowController?.showWindow(nil)
+    }
+
     
     @objc func openGithubURL() {
             if let url = URL(string: "https://github.com/igormomc/Scrippi") {
