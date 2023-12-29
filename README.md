@@ -17,7 +17,7 @@ Scrippi is a macOS menu bar app designed to enhance productivity by simplifying 
 - **Dark Mode Compatibility**: Icons adapt to both light and dark modes of macOS.
 
 ## Download
-You can download the latest version of Scrippi here: [Download Scrippi](URL_OF_YOUR_RELEASE)
+You can download the latest version of Scrippi here: [Download Scrippi](https://github.com/igormomc/Scrippi/releases/download/v1.0.0/Scrippi.zip)
 
 
 ## Terminal Preference Feature
