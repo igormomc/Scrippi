@@ -16,9 +16,24 @@ Scrippi is a macOS menu bar app designed to enhance productivity by simplifying 
 - **JSON Configuration**: Easily configure menu items through a JSON file for rapid updates and customization.
 - **Dark Mode Compatibility**: Icons adapt to both light and dark modes of macOS.
 
-## Download
-You can download the latest version of Scrippi here: [Download Scrippi](https://github.com/igormomc/Scrippi/releases/download/v1.0.0/Scrippi.zip)
+## Download and Opening Scrippi on macOS
+You can download the latest version of Scrippi directly here: [Download Scrippi](https://github.com/igormomc/Scrippi/releases/download/v1.0.0/Scrippi.zip)
 
+### Gatekeeper Security Warning
+When you first download and try to open Scrippi on a macOS system, you may encounter a security warning from Gatekeeper. Gatekeeper is a security feature in macOS designed to protect your computer by only allowing trusted software to run. By default, it allows apps from the Mac App Store and apps from identified developers who have obtained an Apple Developer ID and have their apps notarized.
+
+Since Scrippi is currently signed with a self-signed certificate and not notarized, macOS cannot verify the app and may prevent it from opening normally.
+
+### How to Open Scrippi
+To open Scrippi, follow these steps:
+
+1. **Locate Scrippi.app**: Find Scrippi in your Applications folder or wherever you placed it.
+2. **Open Anyway**: 
+   - Right-click (or Ctrl-click) on Scrippi.app.
+   - Select "Open" from the context menu.
+   - A dialog will appear warning you about the app being from an unidentified developer. Click "Open" in this dialog to proceed.
+
+By performing these steps, you are telling Gatekeeper that you trust Scrippi and wish to open it. This step needs to be done only once; afterwards, you can open Scrippi as usual.
 
 ## Terminal Preference Feature
 One of Scrippi's key features is the ability to choose your preferred terminal application for executing scripts. Whether you're comfortable with the standard macOS Terminal or prefer the advanced features of iTerm, Scrippi allows you to select your preferred option in the settings. This flexibility ensures that the app seamlessly integrates into your existing workflow.
