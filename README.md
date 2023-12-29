@@ -20,7 +20,14 @@ Scrippi is a macOS menu bar app designed to enhance productivity by simplifying 
 One of Scrippi's key features is the ability to choose your preferred terminal application for executing scripts. Whether you're comfortable with the standard macOS Terminal or prefer the advanced features of iTerm, Scrippi allows you to select your preferred option in the settings. This flexibility ensures that the app seamlessly integrates into your existing workflow.
 
 ### Setting Your Preferred Terminal
-In Scrippi's settings, you can select either the default macOS Terminal or iTerm as your preferred terminal application. This choice determines which terminal Scrippi will use to execute your scripts and commands.
+In Scrippi's settings, you can select either the default macOS Terminal or iTerm as your preferred terminal application. This choice determines which terminal Scrippi will use to execute your scripts and commands.(Coming more soon)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/dhanishgajjar/terminal-icons/master/png/sublime.png" alt="Mac Terminal icon" width="128" height="128">
+  <img src="https://cl.ly/1Q2M0r2C1h0b/icon_128x128@2x.png" alt="Iterm2 icon" width="128" height="128">
+</p>
+
+
 
 ## Security Warning Message
 When using Scrippi to execute scripts, you may encounter the following security warning message:
