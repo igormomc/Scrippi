@@ -16,6 +16,10 @@ Scrippi is a macOS menu bar app designed to enhance productivity by simplifying 
 - **JSON Configuration**: Easily configure menu items through a JSON file for rapid updates and customization.
 - **Dark Mode Compatibility**: Icons adapt to both light and dark modes of macOS.
 
+## Download
+You can download the latest version of Scrippi here: [Download Scrippi](URL_OF_YOUR_RELEASE)
+
+
 ## Terminal Preference Feature
 One of Scrippi's key features is the ability to choose your preferred terminal application for executing scripts. Whether you're comfortable with the standard macOS Terminal or prefer the advanced features of iTerm, Scrippi allows you to select your preferred option in the settings. This flexibility ensures that the app seamlessly integrates into your existing workflow.
 
