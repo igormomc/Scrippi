@@ -106,7 +106,7 @@ class SettingsWindowController: NSWindowController, NSWindowDelegate {
     }
 
     @objc func terminalToggleChanged(sender: NSSegmentedControl) {
-        print("Terminal type changed to")
+        print("Terminal type changed to", sender.label(forSegment: sender.selectedSegment)!)
     }
     
     @objc func saveSettings() {

@@ -18,9 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
-        let fileManager = FileManager.default
-        let appSupportURL = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
-        let appDirectoryURL = appSupportURL.appendingPathComponent("Scrippi")
+        let appDirectoryURL = getAppDirectoryURL()
         editableJsonURL = appDirectoryURL.appendingPathComponent("MenuItems.json")
        
 

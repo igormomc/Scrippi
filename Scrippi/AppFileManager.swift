@@ -14,9 +14,7 @@ class AppFileManager {
         self.editableJsonURL = editableJsonURL
     }
     func prepareEditableJsonFile() {
-        let fileManager = FileManager.default
-        let appSupportURL = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
-        let appDirectoryURL = appSupportURL.appendingPathComponent("Scrippi")
+        let appDirectoryURL = getAppDirectoryURL()
         editableJsonURL = appDirectoryURL.appendingPathComponent("MenuItems.json")
         
         if !fileManager.fileExists(atPath: editableJsonURL!.path) {
