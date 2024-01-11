@@ -4,29 +4,19 @@
             "type": "separator"
         },
         {
-            "title": "Script 100",
-            "script": "ls"
+            "title": "Who Am I?",
+            "script": "whoami"
         },
         {
-            "title": "Script 2",
-            "script": "ls -la"
-        },{
-            "title": "Script 3",
-            "script": "ECHO Script 3"
+            "title": "Ping Google",
+            "script": "ping google.com"
         },
         {
             "type": "separator"
         },
         {
-            "title": "Script 4",
-            "script": "cd .. && ls"
-        },
-        {
-            "type": "separator"
-        },
-        {
-            "title": "Work Docker Script",
-            "script": "ECHO Hello world"
+            "title": "Run HTTP Server",
+            "script": "python3 -m http.server"
         }
     ]
 }
