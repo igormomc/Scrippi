@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let fileManager = FileManager.default
         let appSupportURL = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
-        let appDirectoryURL = appSupportURL.appendingPathComponent("YourAppName")
+        let appDirectoryURL = appSupportURL.appendingPathComponent("Scrippi")
         editableJsonURL = appDirectoryURL.appendingPathComponent("MenuItems.json")
        
 
