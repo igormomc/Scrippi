@@ -34,7 +34,7 @@ class SettingsWindowController: NSWindowController, NSWindowDelegate {
         
         let defaults = UserDefaults.standard
         if defaults.string(forKey: "terminalType") == nil {
-            defaults.set("Terminal", forKey: "terminalType")
+            defaults.set(getDefaultTerminal().Name, forKey: "terminalType")
         }
 
         let sections = ["General", "Appearance", "Notifications", "Accounts", "Advanced"]
@@ -54,13 +54,13 @@ class SettingsWindowController: NSWindowController, NSWindowDelegate {
                 titleLabel.translatesAutoresizingMaskIntoConstraints = false
                 tabContent.addSubview(titleLabel)
 
-                let terminalToggle = NSSegmentedControl(labels: ["Terminal", "iTerm2"], trackingMode: .selectOne, target: self, action: #selector(terminalToggleChanged))
+                let terminalToggle = NSSegmentedControl(labels: getTerminalLabels(), trackingMode: .selectOne, target: self, action: #selector(terminalToggleChanged))
                 terminalToggle.translatesAutoresizingMaskIntoConstraints = false
                 tabContent.addSubview(terminalToggle)
 
                 // Retrieve the saved terminal type from UserDefaults
-                let selectedTerminalType = defaults.string(forKey: "terminalType") ?? "Terminal"
-                let selectedSegmentIndex = selectedTerminalType == "Terminal" ? 0 : 1
+                let selectedTerminal = getUserDefaultTerminal()
+                let selectedSegmentIndex = getIndexFromTerminalType(terminalType: selectedTerminal)
                 terminalToggle.setSelected(true, forSegment: selectedSegmentIndex)
                 
                 let saveButton = NSButton(title: "Save", target: self, action: #selector(saveSettings))
@@ -106,7 +106,7 @@ class SettingsWindowController: NSWindowController, NSWindowDelegate {
     }
 
     @objc func terminalToggleChanged(sender: NSSegmentedControl) {
-        print("Terminal type changed to")
+        print("Terminal type changed to", sender.label(forSegment: sender.selectedSegment)!)
     }
     
     @objc func saveSettings() {

@@ -15,9 +15,7 @@ class JsonFileHandler {
     }
 
     private func prepareEditableJsonFile() {
-        let fileManager = FileManager.default
-        let appSupportURL = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
-        let appDirectoryURL = appSupportURL.appendingPathComponent("YourAppName")
+        let appDirectoryURL = getAppDirectoryURL()
         editableJsonURL = appDirectoryURL.appendingPathComponent("MenuItems.json")
 
         if !fileManager.fileExists(atPath: editableJsonURL!.path) {

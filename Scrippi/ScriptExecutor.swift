@@ -8,6 +8,7 @@
 import Cocoa
 
 class ScriptExecutor {
+    
     func executeScript(command: String) {
         let scriptContent = "#!/bin/zsh\n\(command)\nexec $SHELL -l"
         let tempDirectory = NSTemporaryDirectory()
@@ -18,23 +19,10 @@ class ScriptExecutor {
             let fileURL = URL(fileURLWithPath: scriptPath)
             try FileManager.default.setAttributes([.posixPermissions: 0o755], ofItemAtPath: scriptPath)
             
-            // Retrieve the saved terminal type from UserDefaults
-            let defaults = UserDefaults.standard
-            let selectedTerminalType = defaults.string(forKey: "terminalType") ?? "Terminal"
+            // Get terminal selected by the user
+            let terminal = getUserDefaultTerminal()
             
-            // Determine the bundle identifier of the terminal application
-            let terminalBundleIdentifier: String
-            switch selectedTerminalType {
-            case "Terminal":
-                terminalBundleIdentifier = "com.apple.Terminal"
-            case "iTerm2":
-                terminalBundleIdentifier = "com.googlecode.iterm2"
-            default:
-                print("Unknown terminal type: \(selectedTerminalType)")
-                return
-            }
-            
-            if let terminalURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: terminalBundleIdentifier) {
+            if let terminalURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: terminal.BundleIdentifier) {
                 let configuration = NSWorkspace.OpenConfiguration()
                 NSWorkspace.shared.open([fileURL], withApplicationAt: terminalURL, configuration: configuration, completionHandler: nil)
             }
