@@ -17,11 +17,11 @@ class AppFileManager {
         let appDirectoryURL = getAppDirectoryURL()
         editableJsonURL = appDirectoryURL.appendingPathComponent("MenuItems.json")
         
-        if !fileManager.fileExists(atPath: editableJsonURL!.path) {
+        if !FileManager.default.fileExists(atPath: editableJsonURL!.path) {
             if let bundleJsonURL = Bundle.main.url(forResource: "MenuItems", withExtension: "json") {
                 do {
-                    try fileManager.createDirectory(at: appDirectoryURL, withIntermediateDirectories: true, attributes: nil)
-                    try fileManager.copyItem(at: bundleJsonURL, to: editableJsonURL!)
+                    try FileManager.default.createDirectory(at: appDirectoryURL, withIntermediateDirectories: true, attributes: nil)
+                    try FileManager.default.copyItem(at: bundleJsonURL, to: editableJsonURL!)
                 } catch {
                     print("Error copying JSON file: \(error)")
                 }
