@@ -107,9 +107,17 @@ class MenuManager {
     
     @objc func openSettingsWindow() {
         let appDelegate = NSApplication.shared.delegate as? AppDelegate
-        appDelegate?.settingsWindowController = SettingsWindowController()
+        if appDelegate?.settingsWindowController == nil {
+            appDelegate?.settingsWindowController = SettingsWindowController()
+            appDelegate?.settingsWindowController?.window?.isReleasedWhenClosed = false
+        }
+        
         appDelegate?.settingsWindowController?.showWindow(nil)
+        appDelegate?.settingsWindowController?.window?.makeKeyAndOrderFront(nil)
+        NSApp.activate(ignoringOtherApps: true)
     }
+
+
 
     
     @objc func openGithubURL() {
