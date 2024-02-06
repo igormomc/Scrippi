@@ -79,7 +79,8 @@ Regular tasks, such as starting Docker containers in a specific work folder, can
 ## Scrippi in Action
 Take a look at how Scrippi integrates seamlessly into your macOS menu bar:
 <p align="left">
-  <img width="358" alt="Screenshot 2023-12-29 at 01 22 05" src="https://github.com/igormomc/Scrippi/assets/60653284/832d8877-1b7a-4bb0-a0e7-d688ce21c2db">
+  <img width="358" height="310" alt="Screenshot 2023-12-29 at 01 22 05" src="https://github.com/igormomc/Scrippi/assets/60653284/832d8877-1b7a-4bb0-a0e7-d688ce21c2db">
+  <img width="325" height="310" alt="Screenshot 2024-02-06 at 10 21 44" src="https://github.com/igormomc/Scrippi/assets/60653284/58ff6a29-24b0-4ad5-ac72-dd598688443b">
 </p>
 
 
