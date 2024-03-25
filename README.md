@@ -18,7 +18,7 @@ Scrippi is a macOS menu bar app designed to enhance productivity by simplifying 
 - **Dark Mode Compatibility**: Icons adapt to both light and dark modes of macOS.
 
 ## Download and Opening Scrippi on macOS
-You can download the latest version of Scrippi directly here: [Download Scrippi](https://github.com/igormomc/Scrippi/releases/download/v1.0.0/Scrippi.zip)
+You can download the latest version of Scrippi directly here: [Download Scrippi](https://github.com/igormomc/Scrippi/releases/download/v1.0.2/Scrippi.zip)
 
 ### Gatekeeper Security Warning
 When you first download and try to open Scrippi on a macOS system, you may encounter a security warning from Gatekeeper. Gatekeeper is a security feature in macOS designed to protect your computer by only allowing trusted software to run. By default, it allows apps from the Mac App Store and apps from identified developers who have obtained an Apple Developer ID and have their apps notarized.
