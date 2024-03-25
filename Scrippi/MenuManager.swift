@@ -26,14 +26,22 @@ class MenuManager {
             for item in menuItems {
                 if let type = item["type"] as? String, type == "separator" {
                     menu.addItem(NSMenuItem.separator())
-                } else if let title = item["title"] as? String, let script = item["script"] as? String {
+                } else if let title = item["title"] as? String {
                     let menuItem = NSMenuItem(title: title, action: #selector(menuItemAction(_:)), keyEquivalent: "")
-                    menuItem.representedObject = script
                     menuItem.target = self
+                    
+                    if let script = item["script"] as? String {
+                        menuItem.representedObject = [script] 
+                    }
+                    else if let scripts = item["scripts"] as? [String] {
+                        menuItem.representedObject = scripts
+                    }
+                    
                     menu.addItem(menuItem)
                 }
             }
         }
+
         
         
         menu.addItem(NSMenuItem.separator())
@@ -76,26 +84,39 @@ class MenuManager {
     }
 
     func loadMenuItemsFromJson() -> [[String: Any]]? {
-        guard let url = editableJsonURL,
-              let data = try? Data(contentsOf: url),
-              let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []),
-              let jsonDict = jsonObject as? [String: Any],
-              let menuItems = jsonDict["menu"] as? [[String: Any]] else {
-            print("Failed to load or parse the editable MenuItems.json")
+        guard let url = editableJsonURL else {
+            print("Editable JSON file URL is not set.")
             return nil
         }
-        return menuItems
+        
+        do {
+            let data = try Data(contentsOf: url)
+            if let jsonObject = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+               let menuItems = jsonObject["menu"] as? [[String: Any]] {
+                return menuItems
+            } else {
+                print("Failed to interpret JSON. Check the 'menu' key and its structure.")
+                return nil
+            }
+        } catch {
+            print("Failed to load or parse the JSON file: \(error)")
+            return nil
+        }
     }
 
+	
     @objc func refreshMenu() {
             constructMenu()
         }
     
     @objc func menuItemAction(_ sender: NSMenuItem) {
-           if let script = sender.representedObject as? String {
-               scriptExecutor.executeScript(command: script)
-           }
-       }
+        if let script = sender.representedObject as? String {
+            scriptExecutor.executeScript(commands: [script])
+        } else if let scripts = sender.representedObject as? [String] {
+            scriptExecutor.executeScript(commands: scripts)
+        }
+    }
+
     
     @objc func editJsonFile() {
         guard let url = editableJsonURL else {

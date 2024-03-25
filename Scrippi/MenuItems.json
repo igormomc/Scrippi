@@ -15,8 +15,12 @@
             "type": "separator"
         },
         {
-            "title": "Run HTTP Server",
-            "script": "python3 -m http.server"
-        }
+            "title": "Multiple Scripts",
+            "scripts": [
+                "echo 'This is the first script'",
+                "echo 'This is the second script'",
+                "echo 'This is the Third script'"
+            ]
+        },
     ]
 }
