@@ -84,3 +84,12 @@ Take a look at how Scrippi integrates seamlessly into your macOS menu bar:
 </p>
 
 
+
+## Important Notice for Developers Using Xcode
+If you find that not all Swift files are loading correctly into Xcode, please follow these steps to ensure they are properly added to your project:
+- Right-click on the group or folder within your Xcode project where you want to add the missing files.
+- Select "Add Files to [YourProjectName]".
+- Navigate to the location of the missing files in the file dialog, select them, and click "Add".
+This is a common issue where files located in the project folder are not automatically recognized by Xcode and must be manually added to the project.
+
+
