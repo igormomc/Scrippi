@@ -28,12 +28,4 @@ class AppFileManager {
             }
         }
     }
-    
-    @objc func editJsonFile() {
-        if let url = editableJsonURL {
-            NSWorkspace.shared.open(url)
-        } else {
-            print("Editable JSON file URL is not set.")
-        }
-    }
 }

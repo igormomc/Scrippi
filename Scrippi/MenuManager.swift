@@ -98,10 +98,21 @@ class MenuManager {
        }
     
     @objc func editJsonFile() {
-        if let url = editableJsonURL {
-            NSWorkspace.shared.open(url)
+        guard let url = editableJsonURL else {
+                    print("Editable JSON file URL is not set.")
+                    return
+        }
+        let textEditBundleIdentifier = "com.apple.TextEdit"
+        if let textEditURL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: textEditBundleIdentifier) {
+            let configuration = NSWorkspace.OpenConfiguration()
+            
+            NSWorkspace.shared.open([url], withApplicationAt: textEditURL, configuration: configuration) { (app, error) in
+                if let error = error {
+                    print("Failed to open the JSON file with TextEdit: \(error.localizedDescription)")
+                }
+            }
         } else {
-            print("Editable JSON file URL is not set.")
+            print("Failed to find TextEdit application URL.")
         }
     }
     
