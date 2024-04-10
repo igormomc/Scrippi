@@ -14,22 +14,21 @@ struct TerminalType {
 
 let SupportedTerminals = [
   TerminalType(Name: "Terminal", BundleIdentifier: "com.apple.Terminal"),
-  TerminalType(Name: "iTerm2", BundleIdentifier: "com.googlecode.iterm2"),
+  TerminalType(Name: "iTerm", BundleIdentifier: "com.googlecode.iterm2"),
 ]
 
 func getUserDefaultTerminal() -> TerminalType {
-  // Retrieve the saved terminal type from UserDefaults
-  let defaults = UserDefaults.standard
-  let selectedTerminalType = defaults.string(forKey: "terminalType") ?? SupportedTerminals[0].Name
+    let defaults = UserDefaults.standard
+    print("Saved terminalType: \(defaults.string(forKey: "terminalType") ?? "None")")
+    let selectedTerminalType = defaults.string(forKey: "terminalType") ?? TerminalChoice.terminal.rawValue
 
-  for terminal in SupportedTerminals {
-    if terminal.Name == selectedTerminalType {
-      return terminal
+    if let terminal = SupportedTerminals.first(where: { $0.Name == selectedTerminalType }) {
+        return terminal
+    } else {
+        return getDefaultTerminal()
     }
-  }
-
-  return getDefaultTerminal()
 }
+
 
 func getIndexFromTerminalType(terminalType: TerminalType) -> Int {
   for (index, terminal) in SupportedTerminals.enumerated() {

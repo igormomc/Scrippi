@@ -14,7 +14,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var editableJsonURL: URL?
     var menuManager: MenuManager!
     var appFileManager: AppFileManager!
-    var settingsWindowController: SettingsWindowController?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
@@ -43,9 +42,4 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func quitApp() {
         NSApp.terminate(self)
     }
-    
-    @objc func showSettings() {
-           settingsWindowController = SettingsWindowController()
-           settingsWindowController?.showWindow(nil)
-       }
 }

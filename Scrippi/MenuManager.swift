@@ -73,11 +73,9 @@ class MenuManager {
             menu.addItem(githubMenuItem)
         }
         
-        let settingsMenuItem = NSMenuItem(title: "Settings", action: #selector(openSettingsWindow), keyEquivalent: "")
-        settingsMenuItem.target = self
-        menu.addItem(settingsMenuItem)
-
-        
+        let settingsMenuItem2 = NSMenuItem(title: "Settings", action: #selector(openSettingsWindow2), keyEquivalent: "")
+        settingsMenuItem2.target = self
+        menu.addItem(settingsMenuItem2)
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
 
         statusItem.menu = menu
@@ -136,20 +134,17 @@ class MenuManager {
             print("Failed to find TextEdit application URL.")
         }
     }
-    
-    @objc func openSettingsWindow() {
-        let appDelegate = NSApplication.shared.delegate as? AppDelegate
-        if appDelegate?.settingsWindowController == nil {
-            appDelegate?.settingsWindowController = SettingsWindowController()
-            appDelegate?.settingsWindowController?.window?.isReleasedWhenClosed = false
+
+    var settingsViewController: SettingsViewController?
+
+    @objc func openSettingsWindow2() {
+        if settingsViewController == nil {
+            settingsViewController = SettingsViewController()
         }
         
-        appDelegate?.settingsWindowController?.showWindow(nil)
-        appDelegate?.settingsWindowController?.window?.makeKeyAndOrderFront(nil)
-        NSApp.activate(ignoringOtherApps: true)
+        settingsViewController?.showWindow(nil)
+        NSApp.activate(ignoringOtherApps: true) 
     }
-
-
 
     
     @objc func openGithubURL() {

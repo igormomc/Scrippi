@@ -124,4 +124,3 @@ class SettingsWindowController: NSWindowController, NSWindowDelegate {
        }
 
    }
-
