@@ -12,12 +12,13 @@ Scrippi is a macOS menu bar app designed to enhance productivity by simplifying 
 ## Features
 - **Customizable Menu**: Add, remove, or modify menu items to fit your workflow.
 - **Quick Script Execution**: Execute predefined scripts or commands from the menu bar without typing them in the terminal.
+- **Multi-Script Execution**: Launch multiple scripts with a single menu item, allowing for simultaneous script execution across different terminals.
 - **Terminal Preference**: Choose between using the standard macOS Terminal or iTerm for command execution in the settings.
 - **JSON Configuration**: Easily configure menu items through a JSON file for rapid updates and customization.
 - **Dark Mode Compatibility**: Icons adapt to both light and dark modes of macOS.
 
 ## Download and Opening Scrippi on macOS
-You can download the latest version of Scrippi directly here: [Download Scrippi](https://github.com/igormomc/Scrippi/releases/download/v1.0.0/Scrippi.zip)
+You can download the latest version of Scrippi directly here: [Download Scrippi](https://github.com/igormomc/Scrippi/releases/download/v1.0.2/Scrippi.zip)
 
 ### Gatekeeper Security Warning
 When you first download and try to open Scrippi on a macOS system, you may encounter a security warning from Gatekeeper. Gatekeeper is a security feature in macOS designed to protect your computer by only allowing trusted software to run. By default, it allows apps from the Mac App Store and apps from identified developers who have obtained an Apple Developer ID and have their apps notarized.
@@ -70,6 +71,14 @@ Regular tasks, such as starting Docker containers in a specific work folder, can
         {
             "title": "Start Docker",
             "script": "cd path/to/workfolder && docker compose up"
+        },
+        {
+            "title": "Multiple Scripts",
+            "scripts": [
+                "echo 'This is the first script'",
+                "echo 'This is the second script'",
+                "echo 'This is the Third script'"
+            ]
         },
         // Additional commands or separators as needed
     ]
